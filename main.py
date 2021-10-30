@@ -9,7 +9,7 @@ INIT_MAP = "startVillage"
 
 if __name__ == '__main__':
     pygame.init()
-    game = Game(MAPS_DICT[INIT_MAP])
+    game = Game(init_map_filename=MAPS_DICT[INIT_MAP])
     game.run()
 
 
