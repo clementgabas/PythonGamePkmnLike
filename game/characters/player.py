@@ -21,6 +21,8 @@ class Player(pygame.sprite.Sprite):
         self.number_steps_curr_direction = 0
         self.moving_speed = 6
 
+        self.list_of_pkmn = list()
+
     # Sprite-image management
 
     def make_image_dict(self, x: int = 0):
@@ -45,7 +47,7 @@ class Player(pygame.sprite.Sprite):
             case 2:
                 return self.make_image(self.make_image_dict(x=64)[direction])
 
-    def get_image(self, x, y):
+    def get_image(self, x: int, y: int) -> pygame.Surface:
         image = pygame.Surface([32, 32])
         image.blit(self.sprite_sheet, (0, 0), (x, y, 32, 32))
         return image

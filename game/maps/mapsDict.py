@@ -1,5 +1,6 @@
 MAPS_DICT = {
-    "startVillage": "assets/maps/villagesAndCities/startVillage.tmx",
+    # "startVillage": "assets/maps/villagesAndCities/startVillage.tmx",
+    "startVillage": "assets/maps/lake/lake1.1.tmx",
     "house3_startVillage": "assets/maps/houses/house3_startVillage.tmx"
 }
 
