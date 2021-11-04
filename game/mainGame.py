@@ -13,8 +13,8 @@ class Game:
         self.screen = pygame.display.set_mode(size=(800, 800))
         pygame.display.set_caption("Unnamed Yet")
 
-        # Load player
-        self.player = Player(0, 0)
+        # Load playersprite
+        self.player = Player("nom", 0, 0)
 
         # Load the map
         init_map_filename = add_relative_way(init_map_filename)
@@ -54,7 +54,7 @@ class Game:
             self.handle_input()  # input handler
             self.update()  # update the game via gameUpdater
 
-            self.current_map.group.center(self.player.rect)  # center the zoom on the player
+            self.current_map.group.center(self.player.rect)  # center the zoom on the playersprite
             self.current_map.group.draw(self.screen)  # draw the layers on the map
             pygame.display.flip()
             for event in pygame.event.get():
